@@ -29,4 +29,4 @@ def calc_game(name):
             logical.wrong_answer(name,answer,true_answer)
             return
     
-    logical.conrgatulations(name)
+    logical.congratulations(name)
