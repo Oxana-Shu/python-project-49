@@ -21,5 +21,5 @@ def wrong_answer(name,answer,true_answer):
     print(f''''{answer}' is wrong answer ;(. Correct answer was '{true_answer}'.
 Let's try again, {name}!''')
     
-def congatulations(name):
+def congratulations(name):
     print(f'Congratulations, {name}!')

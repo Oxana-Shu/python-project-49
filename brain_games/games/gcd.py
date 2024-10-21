@@ -19,6 +19,7 @@ def gcd_game(name):
         else:
             logical.wrong_answer(name,answer,true_answer)
             return
+    logical.conrgatulations(name)
 
 def gcd(first_number,second_number):
     while first_number != 0 and second_number != 0:
