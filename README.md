@@ -16,3 +16,7 @@
 Выполнение шага 8 в проекте Игры разума:
 Игра «Арифметическая прогрессия»
 ![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-progression.gif)
+
+Выполнение шага 9 в проекте Игры разума:
+Игра «Простое ли число?»
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-prime.gif)
