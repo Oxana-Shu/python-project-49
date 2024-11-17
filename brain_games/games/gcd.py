@@ -1,31 +1,29 @@
-#!/usr/bin/env python3
-
-from random import randint
 from brain_games.games import logical
+from brain_games.games import constants
+from math import gcd
 
 
-def gcd_game(name):
-    print('Find the greatest common divisor of given numbers.')
-    true_answers = 0
-    while true_answers < logical.TRUE_ANSWERS_COUNT:
-        random_number_first = randint(1, 100)
-        random_number_second = randint(1, 100)
-        true_answer = gcd(random_number_first, random_number_second)
-        print(f'Question: {random_number_first} {random_number_second}')
-        answer = logical.user_answer()
-        if answer == str(true_answer):
+def gcd_game():
+    name = logical.welcome_user()
+    print(constants.GCD_MESSAGE_START)
+    for i in range(logical.TRUE_ANSWERS_COUNT):
+        example = create_example()
+        user_answer = quest_and_answ(example[0])
+        true_answer = example [1]
+        if user_answer == str(true_answer):
             logical.correct_answer()
-            true_answers += 1
+            i += 1
         else:
-            logical.wrong_answer(name, answer, true_answer)
+            logical.wrong_answer(name, user_answer, true_answer)
             return
     logical.congratulations(name)
 
+def create_example():
+    first_num = logical.get_random_number(1, 100)
+    second_num = logical.get_random_number(1, 100)
+    example = (f'Question: {first_num} {second_num}',gcd(first_num, second_num))
+    return example
 
-def gcd(first_number, second_number):
-    while first_number != 0 and second_number != 0:
-        if first_number > second_number:
-            first_number = first_number % second_number
-        else:
-            second_number = second_number % first_number
-    return first_number + second_number
+def quest_and_answ(question):
+    print(question)
+    return logical.user_answer()

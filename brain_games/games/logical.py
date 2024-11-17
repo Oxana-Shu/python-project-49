@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
-
 import prompt
+from random import randint
 
 
 TRUE_ANSWERS_COUNT = 3
 
 
 def welcome_user():
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
@@ -28,3 +28,6 @@ Let's try again, {name}!''')
 
 def congratulations(name):
     print(f'Congratulations, {name}!')
+
+def get_random_number(start,end):
+    return randint(start,end)
