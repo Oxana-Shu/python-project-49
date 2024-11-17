@@ -19,20 +19,20 @@
 Выполните <b>make package-install</b> для установки пакета в систему.
 
 Игра: «Проверка на чётность»
-![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-even.gif)
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain_games/gifs/brain-even.gif)
 
 
 Игра: «Калькулятор»
-![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-calc.gif)
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain_games/gifs/brain-calc.gif)
 
 
 Игра «НОД»
-![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-gcd.gif)
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain_games/gifs/brain-gcd.gif)
 
 
 Игра «Арифметическая прогрессия»
-![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-progression.gif)
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain_games/gifs/brain-progression.gif)
 
 
 Игра «Простое ли число?»
-![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain-prime.gif)
+![](https://github.com/Oxana-Shu/python-project-49/blob/main/brain_games/gifs/brain-prime.gif)
