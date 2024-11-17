@@ -10,7 +10,10 @@ def progression_game():
         start_progression = logical.get_random_number(1, 15)
         step_progression = logical.get_random_number(2, 10)
         miss_position = logical.get_random_number(1, length_progression)
-        create_example(length_progression, start_progression, step_progression, miss_position)
+        create_example(
+            length_progression, start_progression,
+            step_progression, miss_position
+        )
         true_answer = start_progression + miss_position * step_progression
         answer = logical.user_answer()
         if answer == str(true_answer):
@@ -21,6 +24,7 @@ def progression_game():
             return
     logical.congratulations(name)
 
+
 def create_example(length, start, step, miss):
     question = 'Question:'
     for k in range(1, length + 1):
@@ -29,5 +33,3 @@ def create_example(length, start, step, miss):
         else:
             question += ' ..'
     print(question)
-
-

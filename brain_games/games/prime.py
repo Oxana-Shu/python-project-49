@@ -9,7 +9,7 @@ def prime_game():
         num = create_example()
         user_answer = quest_and_answ(num)
         true_answer = is_prime(num)
-        user_is_true = is_user_unswer(user_answer,true_answer)
+        user_is_true = is_user_unswer(user_answer, true_answer)
         if user_is_true:
             logical.correct_answer()
             i += 1
@@ -19,9 +19,11 @@ def prime_game():
             return
     logical.congratulations(name)
 
+
 def create_example():
     num = logical.get_random_number(1, 100)
     return num
+
 
 def quest_and_answ(num):
     print(f'Question: {num}')
@@ -35,8 +37,12 @@ def is_prime(num):
     for i in range(2, int(num ** 0.5) + 1):
         if num % i == 0:
             return False
-        
-    return True 
+
+    return True
+
 
 def is_user_unswer(user_answer, true_answer):
-    return True if (user_answer == 'yes' and true_answer) or (user_answer == 'no' and not true_answer) else False
+    return True if (
+        user_answer == 'yes'
+        and true_answer
+    ) or (user_answer == 'no' and not true_answer) else False

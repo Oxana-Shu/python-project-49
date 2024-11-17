@@ -29,5 +29,6 @@ Let's try again, {name}!''')
 def congratulations(name):
     print(f'Congratulations, {name}!')
 
-def get_random_number(start,end):
-    return randint(start,end)
+
+def get_random_number(start, end):
+    return randint(start, end)
