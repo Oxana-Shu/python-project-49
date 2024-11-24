@@ -9,13 +9,13 @@ def progression_game():
 
 
 def get_math_question_and_result():
-    PROGRESSION_LENGTH = get_random.get_random_number(5, 15)
+    length = get_random.get_random_number(5, 5)
     first_num = get_random.get_random_number(1, 15)
     diff = get_random.get_random_number(2, 10)
-    missed_num_ind = get_random.get_random_number(0, PROGRESSION_LENGTH)
+    missed_num_ind = get_random.get_random_number(0, length - 1)
     progression = ' '.join([
         '..' if i == missed_num_ind else str(first_num + i * diff)
-        for i in range(PROGRESSION_LENGTH)
+        for i in range(length)
     ])
     print(f'Question: {progression}')
     return first_num + missed_num_ind * diff
