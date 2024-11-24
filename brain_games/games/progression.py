@@ -12,7 +12,7 @@ def get_math_question_and_result():
     PROGRESSION_LENGTH = get_random.get_random_number(5, 15)
     first_num = get_random.get_random_number(1, 15)
     diff = get_random.get_random_number(2, 10)
-    missed_num_ind = get_random.get_random_number(1, PROGRESSION_LENGTH)
+    missed_num_ind = get_random.get_random_number(PROGRESSION_LENGTH)
     progression = ' '.join([
         '..' if i == missed_num_ind else str(first_num + i * diff)
         for i in range(PROGRESSION_LENGTH)
