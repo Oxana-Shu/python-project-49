@@ -8,4 +8,4 @@ PRIME_MESSAGE_START = (
     'Answer "yes" if given number is prime. Otherwise answer "no".'
 )
 PROGRESSION_MESSAGE_START = 'What number is missing in the progression?'
-TRUE_ANSWERS_COUNT = 3
+COUNTS_ROUND = 3
