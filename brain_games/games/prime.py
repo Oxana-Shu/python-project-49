@@ -1,5 +1,6 @@
 from brain_games.games import engine
 from brain_games.games import constants
+from brain_games.games import get_random
 
 
 def prime_game():
@@ -7,7 +8,7 @@ def prime_game():
 
 
 def get_math_question_and_result():
-    num = engine.get_random_number(1, 100)
+    num = get_random.get_random_number(1, 100)
     print(f'Question: {num}')
     return 'yes' if is_prime(num) else 'no'
 

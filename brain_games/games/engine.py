@@ -1,5 +1,4 @@
 import prompt
-from random import randint
 from brain_games.games import constants
 
 
@@ -24,10 +23,6 @@ def user_interaction(context, name=None, answer=None, right_answer=None):
             )
         case 'congratulations':
             print(f'Congratulations, {name}!')
-
-
-def get_random_number(start, end):
-    return randint(start, end)
 
 
 def run_game(get_math_question_and_result, CALC_INSTRUCTION):

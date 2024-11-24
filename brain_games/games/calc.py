@@ -1,5 +1,6 @@
 from brain_games.games import engine
 from brain_games.games import constants
+from brain_games.games import get_random
 import random
 
 
@@ -8,8 +9,8 @@ def calc_game():
 
 
 def get_math_question_and_result():
-    first_num = engine.get_random_number(1, 100)
-    second_num = engine.get_random_number(1, 100)
+    first_num = get_random.get_random_number(1, 100)
+    second_num = get_random.get_random_number(1, 100)
     choises = [
         ('+', first_num + second_num),
         ('-', first_num - second_num),
