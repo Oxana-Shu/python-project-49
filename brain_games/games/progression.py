@@ -17,5 +17,6 @@ def get_math_question_and_result():
 
 
 def progression_game():
-    run_game(get_math_question_and_result,
-                    PROGRESSION_MESSAGE_START)
+    run_game(
+        get_math_question_and_result, PROGRESSION_MESSAGE_START
+    )
