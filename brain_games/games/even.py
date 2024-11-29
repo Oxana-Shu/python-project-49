@@ -1,17 +1,17 @@
-from brain_games.games import engine
-from brain_games.games import constants
-from brain_games.games import get_random
-
-
-def even_game():
-    engine.run_game(get_math_question_and_result, constants.EVEN_MESSAGE_START)
+from brain_games.engine import run_game
+from brain_games.constants import EVEN_MESSAGE_START
+from brain_games.get_random import get_random_number
 
 
 def get_math_question_and_result():
-    num = get_random.get_random_number(1, 100)
-    print(f'Question: {num}')
-    return 'yes' if is_even(num) else 'no'
+    num = get_random_number(1, 100)
+    quesion = f'Question: {num}'
+    return (quesion, 'yes') if is_even(num) else (quesion, 'no')
 
 
 def is_even(num):
-    return True if num % 2 == 0 else False
+    return num % 2 == 0
+
+
+def even_game():
+    run_game(get_math_question_and_result, EVEN_MESSAGE_START)

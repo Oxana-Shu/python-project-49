@@ -1,15 +1,15 @@
-from brain_games.games import engine
-from brain_games.games import constants
-from brain_games.games import get_random
+from brain_games.engine import run_game
+from brain_games.constants import GCD_MESSAGE_START
+from brain_games.get_random import get_random_number
 from math import gcd
 
 
-def gcd_game():
-    engine.run_game(get_math_question_and_result, constants.GCD_MESSAGE_START)
-
-
 def get_math_question_and_result():
-    first_num = get_random.get_random_number(1, 100)
-    second_num = get_random.get_random_number(1, 100)
-    print(f'Question: {first_num} {second_num}')
-    return gcd(first_num, second_num)
+    num1 = get_random_number(1, 100)
+    num2 = get_random_number(1, 100)
+    question = f'Question: {num1} {num2}'
+    return (question, gcd(num1, num2))
+
+
+def gcd_game():
+    run_game(get_math_question_and_result, GCD_MESSAGE_START)

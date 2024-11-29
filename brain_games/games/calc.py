@@ -1,21 +1,25 @@
-from brain_games.games import engine
-from brain_games.games import constants
-from brain_games.games import get_random
-import random
-
-
-def calc_game():
-    engine.run_game(get_math_question_and_result, constants.CALC_MESSAGE_START)
+from brain_games.engine import run_game
+from brain_games.constants import CALC_MESSAGE_START
+from brain_games.get_random import get_random_number
+from random import choice
 
 
 def get_math_question_and_result():
-    first_num = get_random.get_random_number(1, 100)
-    second_num = get_random.get_random_number(1, 100)
-    choises = [
-        ('+', first_num + second_num),
-        ('-', first_num - second_num),
-        ('*', first_num * second_num),
+    num1 = get_random_number(1, 100)
+    num2 = get_random_number(1, 100)
+    operation, right_answer = get_random_operation(num1, num2)
+    question = f'Question: {num1} {operation} {num2}'
+    return (question, right_answer)
+
+
+def get_random_operation(num1, num2):
+    operations = [
+        ('+', num1 + num2),
+        ('-', num1 - num2),
+        ('*', num1 * num2),
     ]
-    operation, right_answer = random.choice(choises)
-    print(f'Question: {first_num} {operation} {second_num}')
-    return right_answer
+    return choice(operations)
+
+
+def calc_game():
+    run_game(get_math_question_and_result, CALC_MESSAGE_START)
