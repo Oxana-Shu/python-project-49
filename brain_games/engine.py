@@ -1,5 +1,5 @@
-import prompt
 from brain_games import constants
+import prompt
 
 
 def user_interaction(context, name=None, answer=None, right_answer=None):

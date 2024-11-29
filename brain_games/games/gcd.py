@@ -1,5 +1,5 @@
-from brain_games.engine import run_game
 from brain_games.constants import GCD_MESSAGE_START
+from brain_games.engine import run_game
 from brain_games.get_random import get_random_number
 from math import gcd
 
