@@ -1,7 +1,8 @@
+from random import choice
+
 from brain_games.constants import CALC_MESSAGE_START
 from brain_games.engine import run_game
 from brain_games.get_random import get_random_number
-from random import choice
 
 
 def get_math_question_and_result():
