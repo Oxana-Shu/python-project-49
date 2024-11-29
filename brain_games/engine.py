@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games import constants
+from brain_games.constants import COUNTS_ROUND
 
 
 def user_interaction(context, name=None, answer=None, right_answer=None):
@@ -29,7 +29,7 @@ def user_interaction(context, name=None, answer=None, right_answer=None):
 def run_game(get_math_question_and_result, CALC_INSTRUCTION):
     name = user_interaction('welcome')
     print(CALC_INSTRUCTION)
-    for i in range(constants.COUNTS_ROUND):
+    for i in range(COUNTS_ROUND):
         question, right_answer = get_math_question_and_result()
         print(question)
         user_answer = user_interaction('answer')
