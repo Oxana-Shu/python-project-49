@@ -5,7 +5,7 @@ from brain_games.get_random import get_random_number
 
 def get_math_question_and_result():
     num = get_random_number(1, 100)
-    quesion = f'Question: {num}'
+    quesion = num
     return (quesion, 'yes') if is_even(num) else (quesion, 'no')
 
 

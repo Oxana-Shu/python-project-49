@@ -12,7 +12,7 @@ def get_math_question_and_result():
         '..' if i == missed_num_ind else str(start_progression + i * diff)
         for i in range(length_progression)
     ])
-    question = f'Question: {progression}'
+    question = progression
     return (question, start_progression + missed_num_ind * diff)
 
 
